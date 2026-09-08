@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltZone Electronics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">VoltZone</span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#deals">Deals</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="dark-mode-btn" title="Toggle Dark Mode">🌙</button>
+                <button id="cart-btn" title="Open Cart">🛒 <span id="cart-count">0</span></button>
+                <button id="auth-btn" class="btn-primary">Login</button>
+                <div id="user-display" class="hidden">
+                    <span id="username-span"></span>
+                    <button id="logout-btn" class="btn-secondary">Logout</button>
+                </div>
+                <button id="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Upgrade Your Tech Lifestyle</h1>
+                <p>Discover laptops, smartphones, accessories, gaming gear, and smart devices with premium quality and great prices.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn-primary">Shop Now</a>
+                    <a href="#deals" class="btn-secondary">View Deals</a>
+                </div>
+            </div>
+            <div class="hero-featured">
+                <div class="featured-card">
+                    <span class="featured-badge">Hot Deal 🔥</span>
+                    <div class="featured-emoji">💻</div>
+                    <h3>UltraBook Pro X</h3>
+                    <p>Slim, fast, and powerful laptop for work and study.</p>
+                    <span class="price">$999 <del>$1199</del></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <div class="service-card">
+                <div class="service-icon">🚀</div>
+                <h3>Fast Delivery</h3>
+                <p>Get your gadgets shipped swiftly right to your doorstep.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛡️</div>
+                <h3>Official Warranty</h3>
+                <p>Enjoy peace of mind with 1-year comprehensive coverage.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💳</div>
+                <h3>Secure Payment</h3>
+                <p>Multiple encrypted payment options for your safety.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💬</div>
+                <h3>24/7 Support</h3>
+                <p>Our expert tech team is always ready to assist you.</p>
+            </div>
+        </section>
+
+        <!-- Deals / Offer Section -->
+        <section id="deals" class="deals-section">
+            <div class="deals-content">
+                <h2>Save Up To 30% On Selected Electronics</h2>
+                <p>Limited-time offers on top-tier gaming rigs, smartphones, and accessories. Don't miss out!</p>
+                <div class="countdown-timer" id="countdown">
+                    <div><span id="days">00</span><small>Days</small></div>
+                    <div><span id="hours">00</span><small>Hours</small></div>
+                    <div><span id="minutes">00</span><small>Mins</small></div>
+                    <div><span id="seconds">00</span><small>Secs</small></div>
+                </div>
+                <a href="#products" class="btn-primary">Claim Offer</a>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products-section">
+            <h2>Explore Our Collection</h2>
+            
+            <!-- Controls: Search & Sort -->
+            <div class="product-controls">
+                <input type="text" id="search-input" placeholder="Search products (e.g. laptop, phone)...">
+                <select id="sort-select">
+                    <option value="default">Default Sort</option>
+                    <option value="low-high">Price: Low to High</option>
+                    <option value="high-low">Price: High to Low</option>
+                    <option value="az">Name A-Z</option>
+                </select>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="category-filters">
+                <button class="cat-btn active" data-category="all">All</button>
+                <button class="cat-btn" data-category="laptops">Laptops</button>
+                <button class="cat-btn" data-category="phones">Phones</button>
+                <button class="cat-btn" data-category="accessories">Accessories</button>
+                <button class="cat-btn" data-category="gaming">Gaming</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="product-grid">
+                <!-- Injected dynamically via JavaScript -->
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <h2>About VoltZone</h2>
+                <p>VoltZone is a premier electronic retail hub dedicated to delivering top-tier performance devices and futuristic smart tech right into your hands. We bridge innovation with affordability.</p>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h3>5K+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>300+</h3>
+                        <p>Products</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>24/7</h3>
+                        <p>Support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews-section">
+            <h2>What Our Customers Say</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <p>"Amazing delivery speed and top-notch laptop quality! Highly recommended store."</p>
+                    <h4>- Alex Morgan</h4>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="review-card">
+                    <p>"Great prices on gaming accessories. Customer support helped me choose the right gear."</p>
+                    <h4>- Sarah Jenkins</h4>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="review-card">
+                    <p>"The wireless headphones I bought sound incredible. Seamless checkout process."</p>
+                    <h4>- David Chen</h4>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Get In Touch</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="contact-name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="contact-email" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <textarea id="contact-message" placeholder="Your Message" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+                <p id="contact-feedback" class="form-feedback"></p>
+            </form>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="newsletter-content">
+                <h2>Subscribe To Our Newsletter</h2>
+                <p>Get the latest gadget releases, tech tips, and exclusive discounts straight to your inbox.</p>
+                <form id="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email address">
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+                <p id="newsletter-feedback" class="form-feedback"></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>⚡ VoltZone</h3>
+                <p>Your trusted destination for advanced consumer electronics and smart lifestyle gear.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#deals">Deals</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#products">Laptops</a></li>
+                    <li><a href="#products">Smartphones</a></li>
+                    <li><a href="#products">Accessories</a></li>
+                    <li><a href="#products">Gaming Gear</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <p>Follow us on Twitter, Facebook, Instagram, and YouTube for daily tech reviews.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VoltZone Electronics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Shopping Cart</h3>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Dynamic cart items -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button id="checkout-btn" class="btn-primary full-width">Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <!-- Product Details Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div id="modal-body">
+                <!-- Populated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Login / Sign Up Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content auth-content">
+            <button class="close-modal">&times;</button>
+            <div class="auth-tabs">
+                <button id="tab-login" class="auth-tab active">Login</button>
+                <button id="tab-signup" class="auth-tab">Sign Up</button>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form">
+                <h3>Welcome Back</h3>
+                <p class="demo-hint">Demo Admin Account: <strong>admin@gmail.com</strong> / <strong>123456</strong></p>
+                <input type="email" id="login-email" placeholder="Email Address">
+                <input type="password" id="login-password" placeholder="Password">
+                <p id="login-error" class="error-msg"></p>
+                <button type="submit" class="btn-primary full-width">Login</button>
+            </form>
+
+            <!-- Sign Up Form -->
+            <form id="signup-form" class="auth-form hidden">
+                <h3>Create Account</h3>
+                <input type="text" id="signup-name" placeholder="Full Name">
+                <input type="email" id="signup-email" placeholder="Email Address">
+                <input type="password" id="signup-password" placeholder="Password (min 6 chars)">
+                <p id="signup-error" class="error-msg"></p>
+                <button type="submit" class="btn-primary full-width">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
